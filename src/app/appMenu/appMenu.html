@@ -1,0 +1,21 @@
+<menu>
+    <button
+        class="hamburgerButton"
+        type="button"
+        [attr.aria-expanded]="expanded()"
+        aria-controls="app-menu-items"
+        (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul
+        id="app-menu-items"
+        class="appMenuItems"
+        [class.isOpen]="expanded()">
+        @for (entry of entries(); track entry) {
+            <li class="appMenuItem"><menu-button [name]="entry.name" [action]="entry.action"></menu-button></li>
+        }
+    </ul>
+</menu>

@@ -1,0 +1,58 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+menu {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hamburgerButton {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    padding: 10px 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hamburgerButton span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: currentColor;
+}
+
+.appMenuItems {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 250ms ease, opacity 150ms ease;
+}
+
+.appMenuItems.isOpen {
+    max-height: 100%;
+    opacity: 1;
+}
+
+.appMenuItem {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30px;
+}

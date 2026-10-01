@@ -1,0 +1,7 @@
+<div class ="scrollableCollection">
+  @for (entry of entries(); track entry.id) {
+    <div class="scrollableCollectionItem" [class.hasImage]="hasImage(entry)">
+        <scrollable-item [columns]="entry.columns"></scrollable-item>
+    </div>
+  }
+</div>

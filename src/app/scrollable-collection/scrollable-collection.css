@@ -1,0 +1,17 @@
+.scrollableCollection {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+}
+
+.scrollableCollectionItem {
+  width: 100%; /* Ensure items take full width */
+  height: 30px;
+  flex: 0 0 auto;
+}
+
+.scrollableCollectionItem.hasImage {
+  height: auto;
+}

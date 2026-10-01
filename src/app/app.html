@@ -1,0 +1,10 @@
+<main [class.isMenuCollapsed]="!menuExpanded()">
+    <app-menu
+        class="mainMenu"
+        [entries]="entries"
+        [expanded]="menuExpanded()"
+        (expandedChange)="setMenuExpanded($event)"></app-menu>
+    <div class="mainContent">
+        <router-outlet></router-outlet>
+    </div>
+</main>

@@ -1,0 +1,17 @@
+<div class="itemColumns">
+    @for (column of columns(); track column.id) {
+        @if (column.type === 'image') {
+            <img
+                [style.width]="getWidth(column)"
+                [attr.src]="column.content"
+                [attr.alt]="column.name"
+                [attr.class]="column.class ? 'itemImage ' + column.class : 'itemImage'"
+                [attr.id]="column.id ? column.id : null" />
+        } @else {
+            <div
+                [style.width]="getWidth(column)"
+                [attr.class]="column.class ? 'itemText ' + column.class : 'itemText'"
+                [attr.id]="column.id ? column.id : null">{{ column.content }}</div>
+        }
+    }
+</div>

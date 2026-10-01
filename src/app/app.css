@@ -1,0 +1,30 @@
+main {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    transition: grid-template-columns 250ms ease;
+}
+
+main.isMenuCollapsed {
+    grid-template-columns: 48px minmax(0, 1fr);
+}
+
+.mainMenu {
+    display: block;
+    min-width: 0;
+    height: 100%;
+}
+
+.mainContent {
+    display: block;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    background: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
